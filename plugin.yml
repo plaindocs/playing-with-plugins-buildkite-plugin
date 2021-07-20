@@ -1,0 +1,9 @@
+name: Test plugin conf plugin
+description: How does this work?
+author: https://github.com/plaindocs
+requirements: []
+configuration:
+  properties:
+    test:
+      type: array
+  additionalProperties: false
