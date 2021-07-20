@@ -1,0 +1,6 @@
+services:
+  lint:
+    image: buildkite/plugin-linter
+    command: ['--id', 'plaindocs/playing-with-plugins']
+    volumes:
+      - ".:/plugin:ro"
