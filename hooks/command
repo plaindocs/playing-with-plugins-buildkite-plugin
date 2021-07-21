@@ -28,11 +28,12 @@ plugin_read_list_into_result() {
 
 if plugin_read_list_into_result BUILDKITE_PLUGIN_PLAYING_WITH_PLUGINS ; then
   for arg in "${result[@]}" ; do
-    echo "--sysctl" "$arg"
+    echo $arg
   done
 fi
 
 echo "The plugin is LIVE\n"
-ccho $BUILDKITE_PLUGIN_PLAYING_WITH_PLUGINS_TEST
+echo $BUILDKITE_PLUGIN_PLAYING_WITH_PLUGINS_TEST
+echo $BUILDKITE_PLUGIN_PLAYING_WITH_PLUGINS_TEST_1
 
 buildkite-agent annotate "REAL LIVE"
