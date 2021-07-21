@@ -26,13 +26,8 @@ plugin_read_list_into_result() {
   [[ ${#result[@]} -gt 0 ]] || return 1
 }
 
-# Parse plugin command if provided
-if plugin_read_list_into_result BUILDKITE_PLUGIN_PLAYING_WITH_PLUGINS ; then
-  for arg in "${result[@]}" ; do
-    command+=("$arg")
-  done
-fi
 
-echo "The plugin is LIVE"
+echo "The plugin is LIVE\n"
+ccho $BUILDKITE_PLUGIN_PLAYING_WITH_PLUGINS_TEST
 
-printf "%q " "${args[@]}"
+buildkite-agent annotate "REAL LIVE"
