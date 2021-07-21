@@ -3,3 +3,4 @@ set -euo pipefail
 
 echo "COMMAND plugin is LIVE\n"
 echo $BUILDKITE_PLUGIN_PLAYING_WITH_PLUGINS_TEST_1
+buildkite-agent annotate "And the answer is: $BUILDKITE_PLUGIN_PLAYING_WITH_PLUGINS_TEST_1"
