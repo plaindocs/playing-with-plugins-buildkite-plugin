@@ -4,6 +4,4 @@ set -euo pipefail
 echo "COMMAND plugin is LIVE\n"
 echo $BUILDKITE_PLUGIN_PLAYING_WITH_PLUGINS_TEST_1
 
-echo "------"
-buildkite-agent annotate "array[1]: $BUILDKITE_PLUGIN_PLAYING_WITH_PLUGINS_TEST_1"
-echo "------"
+buildkite-agent annotate "array[1]: $BUILDKITE_PLUGIN_PLAYING_WITH_PLUGINS_TEST_1" --style 'info' --context 'ctx-info'
